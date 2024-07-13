@@ -1,12 +1,13 @@
- How to Use the Program: 
- This program includes several steps which includes:
+To run this FastAPI application with machine learning, you'll need to install the following Libraries: 
          FastAPI: For creating the web API.  
          Uvicorn: ASGI server for running the FastAPI app.
          scikit-learn: For machine learning models.
          numpy: For numerical operations.
          pandas: (Optional, for data manipulation if needed).
          joblib: For saving and loading models.
- 
+
+How to Use the Program: 
+         This program includes several steps which includes:        
  Run the FastAPI Application:
          Start the FastAPI application by running the script.this will launch the server.
  Add City Weather Data: 
