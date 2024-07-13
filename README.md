@@ -1,6 +1,6 @@
  How to Use the Program: 
  This program includes several steps which includes:
-         FastAPI: For creating the web API.
+         FastAPI: For creating the web API.  
          Uvicorn: ASGI server for running the FastAPI app.
          scikit-learn: For machine learning models.
          numpy: For numerical operations.
