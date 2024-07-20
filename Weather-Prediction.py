@@ -54,11 +54,11 @@ async def predict_weather(city_name: str):
     weather = city_data[city]
     features = np.array([[weather['Temperature'], weather['Humidity'], weather['Wind_speed'], weather['Precipitation']]])
     features_scaled = scaler.transform(features)
-    predicted_temp = temp_model.predict(features_scaled)[0]
-    rain_tomorrow = rain_model.predict(features_scaled)[0]
-    thunderstorm_tomorrow = thunderstorm_model.predict(features_scaled)[0]
+    predicted_temp = float(temp_model.predict(features_scaled)[0])
+    rain_tomorrow = bool(rain_model.predict(features_scaled)[0])
+    thunderstorm_tomorrow = bool(thunderstorm_model.predict(features_scaled)[0])
     return {
-        "Predicted_Temperature": predicted_temp,
-        "Rain_Tomorrow": bool(rain_tomorrow),
-        "Thunderstorm_Tomorrow": bool(thunderstorm_tomorrow)
+        "predicted_temperature": predicted_temp,
+        "rain_tomorrow": rain_tomorrow,
+        "thunderstorm_tomorrow": thunderstorm_tomorrow
     }
